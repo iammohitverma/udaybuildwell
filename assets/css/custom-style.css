@@ -279,6 +279,7 @@ header .inner .address_wrap address p {
     height: 340px;
     overflow: hidden;
     border: 5px solid var(--dark);
+    border-radius: 7px;
 }
 
 .building_plan .content .plan_wrap .img_bx img {
@@ -310,15 +311,16 @@ iframe::-webkit-scrollbar-track {
     font-size: 16px;
     font-weight: 500;
     color: var(--white);
-    background-color: var(--primaryLightGreen);
+    background-color: var(--primaryGreen);
     text-transform: uppercase;
     transition: 0.5s;
     margin-top: 15px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .building_plan .content .plan_wrap .view_pdf:hover {
     color: var(--white);
-    background-color: var(--primaryGreen);
+    background-color: var(--primaryLightGreen);
 }
 
 footer {
