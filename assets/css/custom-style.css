@@ -216,6 +216,7 @@ header .inner .address_wrap address p {
     margin-bottom: 20px;
     height: 300px;
     overflow: hidden;
+    border-radius: 10px;
 }
 
 .featured_list .content .property_wrap .img_bx img {
