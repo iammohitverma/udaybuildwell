@@ -335,7 +335,15 @@ footer {
 }
 
 footer .top {
+    position: relative;
     margin-bottom: 10px;
+}
+
+footer .bottom {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 footer p,
