@@ -214,6 +214,22 @@ header .inner .address_wrap address p {
 .featured_list .content .property_wrap .img_bx {
     position: relative;
     margin-bottom: 20px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.featured_list .content .property_wrap .img_bx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.featured_list .content .property_wrap:hover .img_bx img {
+    transform: scale(1.05) rotate(3deg);
 }
 
 .featured_list .content .property_wrap .details {
@@ -370,6 +386,10 @@ footer a:hover {
 
     .building_plan .content .plan_wrap .img_bx {
         height: 280px;
+    }
+
+    .featured_list .content .property_wrap .img_bx {
+        height: 250px;
     }
 }
 
