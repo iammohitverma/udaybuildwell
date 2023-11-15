@@ -1,0 +1,470 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --primaryGreen: #2c9639;
+    --primaryLightGreen: #bacf4d;
+    --primaryYellow: #ffee55;
+    --white: #fff;
+    --grey: #494949;
+    --dark: #111;
+}
+
+:is(h1, h2, h3, h4, h5, h6, p, figure, img, span, a, ul, address) {
+    margin: 0;
+    padding: 0;
+}
+
+iframe {
+    vertical-align: middle;
+}
+
+ul {
+    list-style-type: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+span,
+a {
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+}
+
+.pt_100 {
+    padding-top: 100px;
+}
+
+.pb_100 {
+    padding-bottom: 100px;
+}
+
+.pt_80 {
+    padding-top: 80px;
+}
+
+.pb_80 {
+    padding-bottom: 80px;
+}
+
+.pt_60 {
+    padding-top: 60px;
+}
+
+.pb_60 {
+    padding-bottom: 60px;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    padding: 20px 0;
+    background-color: #fff;
+}
+
+header .inner {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header .inner .logo {
+    position: relative;
+    max-width: 200px;
+}
+
+header .inner .address_wrap {
+    position: relative;
+    max-width: 500px;
+}
+
+header .inner .address_wrap address {
+    position: relative;
+}
+
+header .inner .address_wrap address h4 {
+    position: relative;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--primaryGreen);
+    margin-bottom: 10px;
+}
+
+header .inner .address_wrap address p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--dark);
+    margin-bottom: 10px;
+}
+
+.hero {
+    position: relative;
+    background: url("../images/hero_banner.jpg") no-repeat center / cover;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--dark);
+    opacity: 0.65;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero .content {
+    position: relative;
+    text-align: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 50px;
+    background-color: var(--white);
+    /* background-color: rgba(255, 255, 255, 0.9); */
+    z-index: 1;
+}
+
+.hero .content h1 {
+    position: relative;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--primaryGreen);
+    margin-bottom: 15px;
+}
+
+.hero .content p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--dark);
+    margin-bottom: 10px;
+}
+
+.sec_heading {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.sec_heading .tag {
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: var(--primaryYellow);
+    color: var(--primaryGreen);
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    /* display: none; */
+}
+
+.sec_heading h2 {
+    position: relative;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--primaryGreen);
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+}
+
+.sec_heading h2::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 80px;
+    height: 3px;
+    background-color: var(--primaryLightGreen);
+    transform: translateX(-50%);
+}
+
+.featured_list {
+    position: relative;
+}
+
+.featured_list .content .property_wrap {
+    position: relative;
+    padding: 15px;
+    background-color: var(--white);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.featured_list .content .col-lg-4 {
+    margin-bottom: 24px;
+}
+
+.featured_list .content .property_wrap .img_bx {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.featured_list .content .property_wrap .details {
+    position: relative;
+}
+
+.featured_list .content .property_wrap .details h3 {
+    position: relative;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.3;
+    color: var(--dark);
+    margin-bottom: 10px;
+}
+
+.featured_list .content .property_wrap .details p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--dark);
+    margin-bottom: 10px;
+}
+
+.featured_list .content .property_wrap a {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--primaryGreen);
+    transition: 0.5s;
+    margin-top: auto;
+}
+
+.featured_list .content .property_wrap a:hover {
+    color: var(--primaryLightGreen);
+}
+
+.building_plan {
+    position: relative;
+    background-color: #4caf5008;
+}
+
+.building_plan .content {
+    position: relative;
+}
+
+.building_plan .content .plan_wrap {
+    position: relative;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.building_plan .content .plan_wrap iframe {
+    position: relative;
+    width: 100%;
+    min-height: 400px;
+    height: 100%;
+}
+
+
+ame::-webkit-scrollbar {
+    width: 6px;
+    background-color: #F5F5F5;
+}
+
+iframe::-webkit-scrollbar-thumb {
+    background-color: #000000;
+}
+
+iframe::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #F5F5F5;
+}
+
+.building_plan .content .plan_wrap .view_pdf {
+    position: relative;
+    padding: 15px 40px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--white);
+    background-color: var(--primaryLightGreen);
+    text-transform: uppercase;
+    transition: 0.5s;
+    margin-top: 15px;
+}
+
+.building_plan .content .plan_wrap .view_pdf:hover {
+    color: var(--white);
+    background-color: var(--primaryGreen);
+}
+
+footer {
+    position: relative;
+    background-color: var(--dark);
+}
+
+footer {
+    position: relative;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer .top {
+    margin-bottom: 10px;
+}
+
+footer p,
+footer a {
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--white);
+}
+
+footer a {
+    color: var(--primaryLightGreen);
+    transition: 0.5s;
+}
+
+footer a:hover {
+    color: var(--primaryYellow);
+}
+
+@media(max-width: 1199.98px) {
+    .building_plan .content .plan_wrap iframe {
+        min-height: 300px;
+    }
+}
+
+@media(max-width: 991.98px) {
+    .pt_100 {
+        padding-top: 80px;
+    }
+
+    .pb_100 {
+        padding-bottom: 80px;
+    }
+
+    .pt_80 {
+        padding-top: 60px;
+    }
+
+    .pb_80 {
+        padding-bottom: 60px;
+    }
+
+    .pt_60 {
+        padding-top: 40px;
+    }
+
+    .pb_60 {
+        padding-bottom: 40px;
+    }
+
+    header {
+        padding: 15px 0;
+    }
+
+    header .inner {
+        justify-content: center;
+    }
+
+    header .inner .address_wrap {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    header .inner .address_wrap address h4 {
+        font-size: 18px;
+    }
+
+    header .inner .address_wrap address p {
+        font-size: 14px;
+    }
+
+    .hero .content {
+        padding: 30px;
+    }
+
+    .hero .content h1 {
+        font-size: 28px;
+    }
+
+    .sec_heading h2 {
+        font-size: 28px;
+    }
+
+    .featured_list .content .property_wrap .details h3 {
+        font-size: 18px;
+    }
+
+}
+
+@media(max-width: 767.98px) {
+    .pt_100 {
+        padding-top: 60px;
+    }
+
+    .pb_100 {
+        padding-bottom: 60px;
+    }
+
+    .pt_80 {
+        padding-top: 40px;
+    }
+
+    .pb_80 {
+        padding-bottom: 40px;
+    }
+
+    .pt_60 {
+        padding-top: 30px;
+    }
+
+    .pb_60 {
+        padding-bottom: 30px;
+    }
+
+    .hero .content {
+        padding: 20px;
+    }
+
+    .hero .content h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .hero .content p {
+        font-size: 14px;
+    }
+
+    .sec_heading {
+        margin-bottom: 20px;
+    }
+
+    .sec_heading h2 {
+        font-size: 24px;
+    }
+
+    .featured_list .content .property_wrap .details h3 {
+        font-size: 16px;
+    }
+
+    .featured_list .content .property_wrap .details p {
+        font-size: 14px;
+    }
+
+    .featured_list .content .property_wrap a {
+        font-size: 14px;
+    }
+
+    footer p,
+    footer a {
+        font-size: 14px;
+    }
+}
