@@ -41,6 +41,87 @@ a {
     text-decoration: none;
 }
 
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+#loader {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: var(--primaryGreen);
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+#loader:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: var(--primaryLightGreen);
+    -webkit-animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite;
+}
+
+#loader:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: var(--primaryYellow);
+    -webkit-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
 .pt_100 {
     padding-top: 100px;
 }
@@ -270,6 +351,9 @@ header .inner .address_wrap address p {
 
 .building_plan {
     position: relative;
+}
+
+.building_plan.earlier {
     background-color: #4caf5008;
 }
 
@@ -301,6 +385,10 @@ header .inner .address_wrap address p {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+.building_plan.earlier .content .plan_wrap .img_bx {
+    height: 300px;
+}
+
 .building_plan .content .plan_wrap .img_bx img {
     position: absolute;
     top: 0;
@@ -310,7 +398,7 @@ header .inner .address_wrap address p {
     object-fit: cover;
 }
 
-ame::-webkit-scrollbar {
+iframe::-webkit-scrollbar {
     width: 6px;
     background-color: #F5F5F5;
 }
@@ -341,6 +429,31 @@ iframe::-webkit-scrollbar-track {
 .building_plan .content .plan_wrap .view_pdf:hover {
     color: var(--white);
     background-color: var(--primaryGreen);
+}
+
+.advertisement {
+    position: relative;
+}
+
+.advertisement .img_bx {
+    position: relative;
+    text-align: center;
+    height: 600px;
+    overflow: hidden;
+    border-style: outset;
+    border-width: 10px;
+    border-color: #ffd700;
+    box-shadow: rgba(0, 0, 0, 0.15) 4.95px 4.95px 2.6px;
+    margin-bottom: 20px;
+}
+
+.advertisement .img_bx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 footer {
@@ -387,7 +500,8 @@ footer a:hover {
         min-height: 300px;
     }
 
-    .building_plan .content .plan_wrap .img_bx {
+    .building_plan .content .plan_wrap .img_bx,
+    .building_plan.earlier .content .plan_wrap .img_bx {
         height: 280px;
     }
 
@@ -458,6 +572,15 @@ footer a:hover {
         font-size: 18px;
     }
 
+    .advertisement .img_bx {
+        height: auto;
+        border-width: 5px;
+    }
+
+    .advertisement .img_bx img {
+        position: relative;
+    }
+
 }
 
 @media(max-width: 767.98px) {
@@ -521,5 +644,11 @@ footer a:hover {
     footer p,
     footer a {
         font-size: 14px;
+    }
+}
+
+@media(max-width: 575.98px) {
+    .sec_heading h2 {
+        font-size: 20px;
     }
 }

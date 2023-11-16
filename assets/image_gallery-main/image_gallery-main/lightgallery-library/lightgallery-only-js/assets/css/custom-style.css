@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+span,
+a {
+    display: inline-block;
+}
+
+a span {
+    display: inline;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.gallery_sec {
+    position: relative;
+    padding: 100px 0;
+    min-height: 100vh;
+    background-color: #fc887b;
+}
+
+.title {
+    position: relative;
+    font-size: 52px;
+    font-weight: 300;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.gallery_wrap {
+    position: relative;
+    z-index: 1;
+}
+
+.gallery_wrap .gallery-container {
+    position: relative;
+}
+
+.gallery_wrap .gallery-container ul {
+    position: relative;
+    column-count: 3;
+    gap: 24px;
+}
+
+.gallery_wrap .gallery-container li {
+    position: relative;
+    margin-bottom: 24px;
+    page-break-inside: avoid;
+    -moz-column-break-inside: avoid;
+    break-inside: avoid;
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.gallery_wrap .gallery-container li::before,
+.gallery_wrap .gallery-container li::after {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: #000;
+    z-index: -1;
+    opacity: 0.45;
+    filter: blur(4px);
+    scale: 0.95;
+}
+
+.gallery_wrap .gallery-container li::before {
+    transform: rotate(5deg);
+}
+
+.gallery_wrap .gallery-container li::after {
+    transform: rotate(-5deg);
+}
